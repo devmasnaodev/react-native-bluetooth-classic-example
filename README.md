@@ -54,6 +54,34 @@ npx expo run:android
 
 ⚠️ Para testes de Bluetooth utilize um dispositivo físico, ative o Modo Desenvolvedor e Depuração USB.
 
+### Permissões Android Requeridas
+
+Este aplicativo requer as seguintes permissões para funcionar corretamente:
+
+### 1. `android.permission.ACCESS_FINE_LOCATION`
+
+- **Descrição**: Esta permissão é necessária para acessar a localização precisa do dispositivo usando o GPS. É usada para funcionalidades como rastreamento de localização em tempo real ou para serviços que dependem da localização do usuário.
+
+### 2. `android.permission.BLUETOOTH_SCAN`
+
+- **Descrição**: Esta permissão é necessária para permitir que o aplicativo escaneie dispositivos Bluetooth próximos. Isso é fundamental para a comunicação com dispositivos Bluetooth, como fones de ouvido, sensores, ou outros dispositivos IoT.
+
+### 3. `android.permission.BLUETOOTH_CONNECT`
+
+- **Descrição**: Esta permissão permite que o aplicativo se conecte a dispositivos Bluetooth. Ela é necessária para que o aplicativo possa interagir diretamente com dispositivos Bluetooth emparelhados ou conectados, como enviar dados ou controlar o dispositivo.
+
+## Como configurar as permissões no seu projeto
+
+Essas permissões precisam ser declaradas no arquivo `app.json` (ou `AndroidManifest.xml` em projetos nativos), conforme mostrado abaixo:
+
+```json
+"permissions": [
+  "android.permission.ACCESS_FINE_LOCATION",
+  "android.permission.BLUETOOTH_SCAN",
+  "android.permission.BLUETOOTH_CONNECT"
+]
+```
+
 ### 📱 Funcionalidades Implementadas
 
 - ✅ Gerenciamento de permissões (Localização e Bluetooth)
