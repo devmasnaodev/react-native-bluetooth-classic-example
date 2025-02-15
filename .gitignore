@@ -34,3 +34,9 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+#Build
+android/
+
+#IDE e Text Editor
+.vscode/
